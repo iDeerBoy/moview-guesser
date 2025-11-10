@@ -1,0 +1,22 @@
+.title {
+  font-family: "Gidugu", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  & > span {
+    display: block;
+  }
+
+  &__firstLine {
+    font-size: 90px;
+    line-height: 40px;
+  }
+
+  &__secondLine {
+    font-size: 107px;
+    line-height: 50px;
+  }
+}
