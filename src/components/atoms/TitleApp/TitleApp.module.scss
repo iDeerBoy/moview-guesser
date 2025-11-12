@@ -1,5 +1,4 @@
 .title {
-  font-family: "Gidugu", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,10 +13,12 @@
   &__firstLine {
     font-size: 90px;
     line-height: 40px;
+    font-family: "Gidugu", sans-serif;
   }
 
   &__secondLine {
     font-size: 107px;
     line-height: 50px;
+    font-family: "Gidugu", sans-serif;
   }
 }

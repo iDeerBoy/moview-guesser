@@ -9,3 +9,19 @@
   justify-content: center;
   align-items: center;
 }
+
+.cornerPlainTopLeft {
+  border-top-left-radius: 0;
+}
+
+.cornerPlainTopRight {
+  border-top-right-radius: 0;
+}
+
+.cornerPlainBottomLeft {
+  border-bottom-left-radius: 0;
+}
+
+.cornerPlainBottomRight {
+  border-bottom-right-radius: 0;
+}
