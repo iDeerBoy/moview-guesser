@@ -1,11 +1,12 @@
-import './App.module.scss'
-import Header from './components/organisms/Header/Header'
+import styles from "./App.module.scss";
+import Header from "./components/organisms/Header/Header";
 
 function App() {
-
   return (
-    <Header />
-  )
+    <div className={styles.App}>
+      <Header />
+    </div>
+  );
 }
 
-export default App
+export default App;

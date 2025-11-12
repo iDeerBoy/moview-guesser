@@ -1,9 +1,10 @@
 import TitleApp from "@/components/atoms/TitleApp/TitleApp";
+import styles from "./Header.module.scss";
 
 const Header: React.FC = () => (
-<section>
+  <header className={styles.Header}>
     <TitleApp />
-</section>
+  </header>
 );
 
 export default Header;
