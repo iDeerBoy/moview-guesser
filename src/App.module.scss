@@ -1,4 +1,5 @@
-@import "./assets/variables/colorSheme.module.scss";
+@import "./assets/variables/colorSchema.module.scss";
+@import "./assets/functions/helpers.module.scss";
 
 * {
   margin: 0;
@@ -11,4 +12,5 @@
   min-width: 100%;
   min-height: 100vh;
   background-color: $bg-app;
+  padding: 30px toPercent(240) 40px toPercent(240);
 }

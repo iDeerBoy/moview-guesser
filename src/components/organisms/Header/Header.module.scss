@@ -1,3 +1,7 @@
+@import "../../../assets/variables/colorSchema.module.scss";
+
 .Header {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid $color-white;
+  display: flex;
+  padding-bottom: 20px;
 }

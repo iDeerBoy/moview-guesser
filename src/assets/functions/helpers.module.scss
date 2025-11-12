@@ -1,0 +1,8 @@
+// Base: 1920px = 100%
+@function toPercent($pixels) {
+  @return calc($pixels / 1920 * 100%);
+}
+
+@function toPercentCustom($pixels, $base: 1920) {
+  @return calc($pixels / $base * 100%);
+}
