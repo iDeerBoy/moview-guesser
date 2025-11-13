@@ -1,0 +1,35 @@
+@import "@/assets/variables/colorSchema.module.scss";
+
+.Button {
+  padding: 14px 18px;
+  font-family: "Gidugu", sans-serif;
+  font-size: 28px;
+  line-height: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.ok {
+  background-color: $green-color;
+}
+
+.alert {
+  background-color: $red-color;
+}
+
+.top-left {
+  border-top-left-radius: 0;
+}
+
+.top-right {
+  border-top-right-radius: 0;
+}
+
+.bottom-left {
+  border-bottom-left-radius: 0;
+}
+
+.bottom-right {
+  border-bottom-right-radius: 0;
+}
