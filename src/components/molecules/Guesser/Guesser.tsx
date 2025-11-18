@@ -3,8 +3,18 @@ import GrayContainer from "@/components/atoms/GrayContainer/GrayContainer";
 import Title from "@/components/atoms/Title/Title";
 import posterMock from "@/assets/images/mockImage.jpg";
 import styels from "./Guesser.module.scss";
+import { useEffect } from "react";
+import { fetchMovies } from "@/store/MoviesDataSlice";
+import { useDispatch } from "react-redux";
+import type { AppDispatch } from "@/store/store";
 
 const Guesser = () => {
+  const dispatch = useDispatch<AppDispatch>();
+
+  useEffect(() => {
+    dispatch(fetchMovies({ startYear: 1990, endYear: 2010, page: 1 }));
+  }, [dispatch]);
+
   return (
     <GrayContainer cornerPlain="bottom-right">
       <div className={styels.Guesser}>

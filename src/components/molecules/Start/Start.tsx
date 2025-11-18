@@ -1,6 +1,7 @@
 import GrayContainer from "@/components/atoms/GrayContainer/GrayContainer";
 import styles from "./Start.module.scss";
 import Button from "@/components/atoms/Button/Button";
+import plusIcon from "@/assets/icons/plus.svg";
 
 const Start = () => {
   return (
@@ -14,7 +15,7 @@ const Start = () => {
             placeholder="Player Name"
           />
           <button className={styles.Start__submit} type="submit">
-            <img src="/src/assets/icons/plus.svg" alt="Add Player" />
+            <img src={plusIcon} alt="Add Player" />
           </button>
         </form>
         <ul className={styles.Start__players}>

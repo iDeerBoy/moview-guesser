@@ -4,6 +4,8 @@ export interface Movie {
   studio: string;
   description: string;
   spanishTitle: string;
+  posterPath?: string;
+  tmdbId?: number;
 }
 
 export const movieList: Movie[] = [
