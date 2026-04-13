@@ -1,11 +1,11 @@
-@import "./assets/variables/colorSchema.module.scss";
-@import "./assets/functions/helpers.module.scss";
+@use "@/assets/variables/colorSchema.module.scss";
+@use "./assets/functions/helpers.module.scss";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: $primary-text-color;
+  color: colorSchema.$primary-text-color;
   font-family: "Onest", sans-serif;
 }
 
@@ -18,6 +18,6 @@ p {
 .App {
   min-width: 100%;
   min-height: 100vh;
-  background-color: $bg-app;
-  padding: 30px toPercent(240) 40px toPercent(240);
+  background-color: colorSchema.$bg-app;
+  padding: 30px helpers.toPercent(240) 40px helpers.toPercent(240);
 }

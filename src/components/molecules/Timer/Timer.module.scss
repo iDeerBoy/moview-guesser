@@ -1,0 +1,72 @@
+@use "@/assets/variables/colorSchema.module.scss";
+
+.Timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+
+  &__seconds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    &Int {
+      font-size: 200px;
+      font-family: "Gidugu", sans-serif;
+      line-height: 90px;
+      font-weight: 400;
+    }
+
+    &Text {
+      text-decoration: underline;
+      text-align: center;
+    }
+  }
+
+  &__players {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > h4 {
+      text-align: center;
+    }
+
+    &List {
+      display: flex;
+      list-style: none;
+      gap: 5px;
+      margin: 15px 0 5px;
+
+      > li {
+        > button {
+          font-size: 30px;
+          padding: 0px 22px;
+          font-weight: 400;
+          font-family: "Gidugu", sans-serif;
+        }
+        &:first-child {
+          > button {
+            border-radius: 5px 0 0 5px;
+          }
+        }
+        &:last-child {
+          > button {
+            border-radius: 0 5px 5px 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__noneButton {
+    padding: 0px 15px;
+    font-size: 30px;
+    border-radius: 0 0 5px 5px;
+    background-color: colorSchema.$red-color;
+    font-family: "Gidugu", sans-serif;
+    cursor: pointer;
+  }
+}

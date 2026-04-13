@@ -1,4 +1,4 @@
-@import "@/assets/variables/colorSchema.module.scss";
+@use "@/assets/variables/colorSchema.module.scss";
 
 .Button {
   padding: 14px 18px;
@@ -11,11 +11,11 @@
 }
 
 .ok {
-  background-color: $green-color;
+  background-color: colorSchema.$green-color;
 }
 
 .alert {
-  background-color: $red-color;
+  background-color: colorSchema.$red-color;
 }
 
 .top-left {

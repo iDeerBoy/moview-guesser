@@ -1,4 +1,4 @@
-@import "../../../assets/variables/colorSchema.module.scss";
+@use "@/assets/variables/colorSchema.module.scss";
 
 .Start {
   display: flex;
@@ -18,7 +18,7 @@
   }
 
   &__input {
-    border: 1px solid $border-color;
+    border: 1px solid colorSchema.$border-color;
     background-color: transparent;
     outline: none;
     padding: 10px 15px;
@@ -28,7 +28,7 @@
   &__submit {
     flex: 1;
     padding: 10px 15px;
-    border: 1px solid $border-color;
+    border: 1px solid colorSchema.$border-color;
     display: flex;
     align-items: center;
     justify-content: center;

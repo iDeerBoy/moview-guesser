@@ -1,7 +1,7 @@
-@import "../../../assets/variables/colorSchema.module.scss";
+@use "@/assets/variables/colorSchema.module.scss";
 
 .GrayContainer {
-  background-color: $bg-gray-container;
+  background-color: colorSchema.$bg-gray-container;
   padding: 30px;
   border-radius: 25px;
   flex: 1;
