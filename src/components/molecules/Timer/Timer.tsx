@@ -6,7 +6,7 @@ const Timer = () => {
     <GrayContainer cornerPlain="bottom-left">
       <div className={styles.Timer}>
         <div className={styles.Timer__seconds}>
-          <span className={styles.Timer__secondsInt}>90</span>
+          <span className={styles.Timer__secondsInt}>00</span>
           <p className={styles.Timer__secondsText}>seconds</p>
         </div>
         <div className={styles.Timer__players}>
