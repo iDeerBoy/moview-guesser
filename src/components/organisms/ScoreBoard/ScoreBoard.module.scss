@@ -1,0 +1,25 @@
+@use "@/assets/variables/colorSchema.module.scss";
+@use "@/assets/functions/helpers.module.scss";
+
+.scoreboard {
+  align-items: center;
+  background-color: colorSchema.$bg-gray-container;
+  border-radius: 25px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 30px;
+
+  &__Header {
+    border-bottom: 1px solid colorSchema.$color-white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    > h4 {
+      font-size: 35px;
+      font-family: "Gidugu", sans-serif;
+    }
+  }
+}
