@@ -31,9 +31,17 @@ export const PlayersDataSlice = createSlice({
         },
       ];
     },
+    removePlayer: (state, action: PayloadAction<string>) => {
+      const { payload } = action;
+      const playersFiltered = state.players.filter(
+        player => player.id !== payload
+      );
+
+      state.players = playersFiltered;
+    },
   },
 });
 
-export const { addNewPlayer } = PlayersDataSlice.actions;
+export const { addNewPlayer, removePlayer } = PlayersDataSlice.actions;
 
 export default PlayersDataSlice.reducer;

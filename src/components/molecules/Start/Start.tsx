@@ -5,17 +5,12 @@ import plusIcon from "@/assets/icons/plus.svg";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "@/store/store";
 import { useCallback, useMemo, useState } from "react";
-import { addNewPlayer } from "@/store/PlayersDataSlice";
+import { addNewPlayer, removePlayer } from "@/store/PlayersDataSlice";
 
 const Start = () => {
   const dispatch = useDispatch();
   const { playersData } = useSelector((state: RootState) => state);
   const [newPlayerName, setNewPlayName] = useState<string>("");
-
-  const addPlayer = useCallback(() => {
-    dispatch(addNewPlayer(newPlayerName));
-    setNewPlayName("");
-  }, [newPlayerName]);
 
   const disabledAdd = useMemo(() => {
     const notEmpty: boolean = newPlayerName.trim() === "";
@@ -24,6 +19,15 @@ const Start = () => {
     );
     return notEmpty || isDuplicated;
   }, [newPlayerName, playersData]);
+
+  const addPlayer = useCallback(() => {
+    dispatch(addNewPlayer(newPlayerName));
+    setNewPlayName("");
+  }, [newPlayerName]);
+
+  const remove = useCallback((playerId: string) => {
+    dispatch(removePlayer(playerId));
+  }, []);
 
   return (
     <GrayContainer cornerPlain="bottom-left">
@@ -56,7 +60,7 @@ const Start = () => {
             <li key={player.id}>
               <Button
                 text="X"
-                onClick={() => console.log("Button")}
+                onClick={() => remove(player.id)}
                 cornerPlain="bottom-left"
                 type="alert"
                 size="s"
