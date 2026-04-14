@@ -4,7 +4,7 @@ import Button from "@/components/atoms/Button/Button";
 import plusIcon from "@/assets/icons/plus.svg";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "@/store/store";
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { addNewPlayer } from "@/store/PlayersDataSlice";
 
 const Start = () => {
@@ -16,6 +16,14 @@ const Start = () => {
     dispatch(addNewPlayer(newPlayerName));
     setNewPlayName("");
   }, [newPlayerName]);
+
+  const disabledAdd = useMemo(() => {
+    const notEmpty: boolean = newPlayerName.trim() === "";
+    const isDuplicated = playersData.players.some(
+      player => player.name.toLowerCase() === newPlayerName.trim().toLowerCase()
+    );
+    return notEmpty || isDuplicated;
+  }, [newPlayerName, playersData]);
 
   return (
     <GrayContainer cornerPlain="bottom-left">
@@ -35,7 +43,11 @@ const Start = () => {
             value={newPlayerName}
             onChange={e => setNewPlayName(e.target.value)}
           />
-          <button className={styles.Start__submit} type="submit">
+          <button
+            className={styles.Start__submit}
+            type="submit"
+            disabled={disabledAdd}
+          >
             <img src={plusIcon} alt="Add Player" />
           </button>
         </form>
