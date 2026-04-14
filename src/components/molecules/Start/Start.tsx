@@ -19,9 +19,36 @@ const Start = () => {
           </button>
         </form>
         <ul className={styles.Start__players}>
-          <li>Player X</li>
-          <li>Player X</li>
-          <li>Player X</li>
+          <li>
+            <Button
+              text="X"
+              onClick={() => console.log("Button")}
+              cornerPlain="bottom-left"
+              type="alert"
+              size="s"
+            />
+            Player X
+          </li>
+          <li>
+            <Button
+              text="X"
+              onClick={() => console.log("Button")}
+              cornerPlain="bottom-left"
+              type="alert"
+              size="s"
+            />
+            Player X
+          </li>
+          <li>
+            <Button
+              text="X"
+              onClick={() => console.log("Button")}
+              cornerPlain="bottom-left"
+              type="alert"
+              size="s"
+            />
+            Player X
+          </li>
         </ul>
         <Button
           text="Start"

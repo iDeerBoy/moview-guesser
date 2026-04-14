@@ -5,11 +5,18 @@ interface ButtonProps {
   onClick: () => void;
   type?: "alert" | "ok";
   cornerPlain: "top-left" | "top-right" | "bottom-left" | "bottom-right";
+  size?: "s" | "m";
 }
-const Button = ({ text, onClick, type = "ok", cornerPlain }: ButtonProps) => {
+const Button = ({
+  text,
+  onClick,
+  type = "ok",
+  cornerPlain,
+  size = "m",
+}: ButtonProps) => {
   return (
     <button
-      className={`${styles.Button} ${styles[type]} ${styles[cornerPlain]}`}
+      className={`${styles.Button} ${styles[type]} ${styles[cornerPlain]} ${styles[size]}`}
       onClick={onClick}
     >
       {text}

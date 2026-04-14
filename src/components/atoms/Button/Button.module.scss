@@ -1,13 +1,23 @@
 @use "@/assets/variables/colorSchema.module.scss";
 
 .Button {
-  padding: 14px 18px;
   font-family: "Gidugu", sans-serif;
-  font-size: 28px;
-  line-height: 20px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.m {
+  padding: 14px 18px;
+  font-size: 28px;
+  line-height: 20px;
+}
+
+.s {
+  padding: 8px;
+  font-size: 12px;
+  line-height: 12px;
+  font-family: "Onest", sans-serif;
 }
 
 .ok {
