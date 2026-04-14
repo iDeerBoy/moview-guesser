@@ -1,0 +1,53 @@
+@use "@/assets/variables/colorSchema.module.scss";
+
+.ScoreTable {
+  width: 100%;
+  height: 100%;
+  border-spacing: 0 10px;
+
+  &__header {
+    &Row {
+      > th {
+        font-weight: 300;
+        padding: 15px;
+      }
+      > th:first-child {
+        text-align: left;
+        font-family: "Gidugu", sans-serif;
+        font-size: 30px;
+      }
+      > th:last-child {
+        text-align: right;
+        font-family: "Gidugu", sans-serif;
+        font-size: 30px;
+      }
+    }
+  }
+
+  &__body {
+    gap: 10px;
+    &Row {
+      > th {
+        border-top: 1px solid colorSchema.$border-color;
+        border-bottom: 1px solid colorSchema.$border-color;
+        font-weight: 300;
+        padding: 15px;
+        background-color: colorSchema.$bg-input-color;
+      }
+      > th:first-child {
+        text-align: left;
+        font-family: "Gidugu", sans-serif;
+        font-size: 30px;
+        border-left: 1px solid colorSchema.$border-color;
+        border-radius: 5px 0 0 5px;
+      }
+      > th:last-child {
+        text-align: right;
+        font-family: "Gidugu", sans-serif;
+        font-size: 30px;
+        border-right: 1px solid colorSchema.$border-color;
+        border-radius: 0 5px 5px 0;
+      }
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import ScoreTable from "@/components/molecules/ScoreTable/ScoreTable";
 import styles from "./ScoreBoard.module.scss";
 
 const ScoreBoard = () => {
@@ -8,9 +9,10 @@ const ScoreBoard = () => {
         <span>Add another player, it’s sad playing alone :(</span>
       </div>
       <div className={styles.scoreboard__Body}>
-        <p>
+        {/* <p>
           Waiting for players<span>...</span>
-        </p>
+        </p> */}
+        <ScoreTable />
       </div>
     </section>
   );
