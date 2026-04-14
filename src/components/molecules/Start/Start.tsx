@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "@/store/store";
 import { useCallback, useMemo, useState } from "react";
 import { addNewPlayer, removePlayer } from "@/store/PlayersDataSlice";
+import { startGame } from "@/store/GameStateSlice";
 
 const Start = () => {
   const dispatch = useDispatch();
@@ -20,6 +21,10 @@ const Start = () => {
     return notEmpty || isDuplicated;
   }, [newPlayerName, players]);
 
+  const disabledStart = useMemo(() => {
+    return players.length <= 1;
+  }, [players]);
+
   const addPlayer = useCallback(() => {
     dispatch(addNewPlayer(newPlayerName));
     setNewPlayName("");
@@ -27,6 +32,10 @@ const Start = () => {
 
   const remove = useCallback((playerId: string) => {
     dispatch(removePlayer(playerId));
+  }, []);
+
+  const startGameHandler = useCallback(() => {
+    dispatch(startGame());
   }, []);
 
   return (
@@ -71,8 +80,9 @@ const Start = () => {
         </ul>
         <Button
           text="Start"
-          onClick={() => console.log("Button")}
+          onClick={startGameHandler}
           cornerPlain="bottom-left"
+          disabled={disabledStart}
         />
       </div>
     </GrayContainer>

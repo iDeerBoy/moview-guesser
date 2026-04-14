@@ -10,7 +10,6 @@ import type { AppDispatch } from "@/store/store";
 
 const Guesser = () => {
   const dispatch = useDispatch<AppDispatch>();
-
   useEffect(() => {
     dispatch(fetchMovies({ startYear: 1990, endYear: 2010, page: 1 }));
   }, [dispatch]);

@@ -5,6 +5,10 @@
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  &:disabled {
+    background-color: colorSchema.$border-color;
+    cursor: default;
+  }
 }
 
 .m {
