@@ -9,16 +9,16 @@ import { addNewPlayer, removePlayer } from "@/store/PlayersDataSlice";
 
 const Start = () => {
   const dispatch = useDispatch();
-  const { playersData } = useSelector((state: RootState) => state);
+  const { players } = useSelector((state: RootState) => state.playersData);
   const [newPlayerName, setNewPlayName] = useState<string>("");
 
   const disabledAdd = useMemo(() => {
     const notEmpty: boolean = newPlayerName.trim() === "";
-    const isDuplicated = playersData.players.some(
+    const isDuplicated = players.some(
       player => player.name.toLowerCase() === newPlayerName.trim().toLowerCase()
     );
     return notEmpty || isDuplicated;
-  }, [newPlayerName, playersData]);
+  }, [newPlayerName, players]);
 
   const addPlayer = useCallback(() => {
     dispatch(addNewPlayer(newPlayerName));
@@ -56,7 +56,7 @@ const Start = () => {
           </button>
         </form>
         <ul className={styles.Start__players}>
-          {playersData.players.map(player => (
+          {players.map(player => (
             <li key={player.id}>
               <Button
                 text="X"
